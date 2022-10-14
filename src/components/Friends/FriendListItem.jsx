@@ -1,14 +1,15 @@
+import {
+  FriendsItem,
+  FriendsStat,
+  FriendsAvatar,
+  FriendsName,
+} from './Friends.styled';
 export function FriendListItem({ friends }) {
-  return friends.map(friend => (
-    <li className="item" key={friend.id}>
-      <span className="status">{friend.isOnline}</span>
-      <img
-        className="avatar"
-        src={friend.avatar}
-        alt={friend.name}
-        width="48"
-      />
-      <p className="name">{friend.name}</p>
-    </li>
+  return friends.map(({ id, isOnline, avatar, name }) => (
+    <FriendsItem key={id}>
+      <FriendsStat isOnline={isOnline}>{isOnline}</FriendsStat>
+      <FriendsAvatar src={avatar} alt={name} width="48" />
+      <FriendsName>{name}</FriendsName>
+    </FriendsItem>
   ));
 }

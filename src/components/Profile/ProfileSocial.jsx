@@ -1,18 +1,19 @@
+import { ProfileStatsList, ProfileStatsItem } from './Profile.styled';
 export function ProfileSocial({ stats: { followers, views, likes } }) {
   return (
-    <ul className="stats">
-      <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{followers}</span>
-      </li>
-      <li>
-        <span className="label">Views</span>
-        <span className="quantity">{views}</span>
-      </li>
-      <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{likes}</span>
-      </li>
-    </ul>
+    <ProfileStatsList>
+      <ProfileStatsItem>
+        <span>Followers</span>
+        <span>{followers}</span>
+      </ProfileStatsItem>
+      <ProfileStatsItem>
+        <span>Views</span>
+        <span>{views}</span>
+      </ProfileStatsItem>
+      <ProfileStatsItem>
+        <span>Likes</span>
+        <span>{likes}</span>
+      </ProfileStatsItem>
+    </ProfileStatsList>
   );
 }

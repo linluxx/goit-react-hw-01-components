@@ -1,10 +1,11 @@
+import { ProfileDescription, ProfileAvatar, Text } from './Profile.styled';
 export function ProfileInfo({ avatar, username, tag, location }) {
   return (
-    <div className="description">
-      <img src={avatar} alt="User avatar" className="avatar" />
-      <p className="name">{username}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
-    </div>
+    <ProfileDescription>
+      <ProfileAvatar src={avatar} alt="User avatar" />
+      <Text>{username}</Text>
+      <Text>@{tag}</Text>
+      <Text>{location}</Text>
+    </ProfileDescription>
   );
 }

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { ProfileWrap } from './Profile.styled';
 import { ProfileInfo } from './ProfileInfo';
 import { ProfileSocial } from './ProfileSocial';
 
 export function Profile({ user: { avatar, username, tag, location, stats } }) {
   return (
-    <div className="profile">
+    <ProfileWrap>
       <ProfileInfo
         username={username}
         tag={tag}
@@ -12,7 +13,7 @@ export function Profile({ user: { avatar, username, tag, location, stats } }) {
         avatar={avatar}
       />
       <ProfileSocial stats={stats} />
-    </div>
+    </ProfileWrap>
   );
 }
 

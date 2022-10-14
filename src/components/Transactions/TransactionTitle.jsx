@@ -1,10 +1,12 @@
+import { TableTitle } from './Transactions.styled';
+
 export function TransactionTitle() {
   return (
     <thead>
       <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
+        <TableTitle>Type</TableTitle>
+        <TableTitle>Amount</TableTitle>
+        <TableTitle>Currency</TableTitle>
       </tr>
     </thead>
   );
